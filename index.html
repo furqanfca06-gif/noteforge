@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NoteForge | Exam-Focused Revision</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --bg: #0f1113;
+            --card-bg: #1a1d21;
+            --text: #ffffff;
+            --text-dim: #9ba3af;
+            --accent: #3b82f6;
+            --border: rgba(255, 255, 255, 0.08);
+        }
+
+        * { box-sizing: border-box; margin: 0; padding: 0; }
+        html { scroll-behavior: smooth; }
+        body {
+            background-color: var(--bg);
+            color: var(--text);
+            font-family: 'Inter', sans-serif;
+            line-height: 1.6;
+            text-align: center;
+        }
+
+        /* HEADER */
+        header { padding: 80px 20px 40px; }
+        header h1 { font-size: 3rem; font-weight: 800; margin-bottom: 10px; letter-spacing: -1px; }
+        .tagline { font-size: 1.2rem; color: var(--accent); font-weight: 600; margin-bottom: 5px; }
+        .trust-line { color: var(--text-dim); font-size: 1rem; max-width: 600px; margin: 0 auto; }
+
+        /* MAIN CONTENT SECTION */
+        .container { max-width: 1000px; margin: 0 auto; padding: 40px 20px; }
+        
+        /* PRODUCT CARDS */
+        .grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+            gap: 25px;
+            margin-top: 40px;
+        }
+
+        .card {
+            background: var(--card-bg);
+            border: 1px solid var(--border);
+            border-radius: 20px;
+            padding: 30px;
+            text-align: left;
+            display: flex;
+            flex-direction: column;
+            transition: transform 0.2s ease;
+        }
+
+        .card:hover { transform: translateY(-5px); border-color: var(--accent); }
+
+        .tags { display: flex; flex-wrap: wrap; gap: 8px; margin-bottom: 15px; }
+        .tag { font-size: 0.7rem; font-weight: 700; background: rgba(255, 255, 255, 0.05); padding: 4px 8px; border-radius: 6px; color: var(--text-dim); }
+        
+        .card h3 { font-size: 1.4rem; margin-bottom: 8px; }
+        .card .desc { color: var(--text-dim); font-size: 0.95rem; margin-bottom: 20px; }
+
+        /* PRICING TABLE */
+        .price-list { margin-bottom: 25px; }
+        .price-item {
+            display: flex;
+            justify-content: space-between;
+            padding: 8px 0;
+            border-bottom: 1px solid var(--border);
+            font-size: 0.9rem;
+        }
+        .price-item:last-child { border: none; font-weight: 700; color: #fff; font-size: 1rem; }
+        .price-val { color: #fff; }
+
+        /* BUTTONS */
+        .btn-group { display: flex; gap: 10px; margin-top: auto; }
+        .btn {
+            flex: 1;
+            padding: 12px;
+            border-radius: 10px;
+            font-weight: 700;
+            font-size: 0.85rem;
+            text-align: center;
+            text-decoration: none;
+            transition: 0.2s;
+        }
+        .btn-sample { background: rgba(255, 255, 255, 0.05); color: #fff; border: 1px solid var(--border); }
+        .btn-buy { background: var(--accent); color: #fff; }
+        .btn:hover { opacity: 0.9; transform: scale(1.02); }
+
+        /* BUNDLE OFFER */
+        .bundle-box {
+            background: linear-gradient(145deg, #1e293b, #0f172a);
+            margin-top: 60px;
+            padding: 40px;
+            border-radius: 24px;
+            border: 2px solid var(--accent);
+        }
+        .bundle-box h2 { font-size: 1.8rem; margin-bottom: 10px; }
+        .bundle-price { font-size: 2.5rem; font-weight: 800; color: #fff; margin: 15px 0; }
+
+        /* YOUTUBE SECTION */
+        .yt-section { padding: 80px 20px; border-top: 1px solid var(--border); }
+        .yt-btn {
+            display: inline-block;
+            background: #ff0000;
+            color: #fff;
+            padding: 15px 35px;
+            border-radius: 30px;
+            font-weight: 700;
+            text-decoration: none;
+            margin-top: 20px;
+        }
+
+        /* INSTRUCTIONS */
+        .instructions { font-size: 0.9rem; color: var(--text-dim); margin-top: 10px; }
+
+        footer { padding: 60px 20px; border-top: 1px solid var(--border); opacity: 0.5; font-size: 0.8rem; }
+
+        @media (max-width: 600px) {
+            header h1 { font-size: 2.2rem; }
+            .grid { grid-template-columns: 1fr; }
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <div class="tagline">NoteForge</div>
+        <h1>Exam-focused notes for last-day revision</h1>
+        <p class="trust-line">No unnecessary theory. Only what you need to write in exams to score high.</p>
+    </header>
+
+    <div class="container">
+        
+        <div class="grid">
+            <!-- SUBJECT 1 -->
+            <div class="card">
+                <div class="tags"><span class="tag">⭐ MOST EXPECTED</span><span class="tag">🔥 REPEATED</span></div>
+                <h3>Web Technology</h3>
+                <p class="desc">The ultimate question bank covering key repeated exam topics.</p>
+                <div class="price-list">
+                    <div class="price-item"><span>SAQs Only</span><span class="price-val">₹20</span></div>
+                    <div class="price-item"><span>LAQs Only</span><span class="price-val">₹30</span></div>
+                    <div class="price-item"><span>FULL PDF</span><span class="price-val">₹50</span></div>
+                </div>
+                <div class="btn-group">
+                    <a href="web_tech_sample.png" target="_blank" class="btn btn-sample">View Sample</a>
+                    <a href="https://wa.me/919618127640?text=Hi, I want Web Technology PDF" class="btn btn-buy">Buy Now</a>
+                </div>
+            </div>
+
+            <!-- SUBJECT 2 -->
+            <div class="card">
+                <div class="tags"><span class="tag">🎯 HIGH SCORING</span><span class="tag">🔥 REPEATED</span></div>
+                <h3>Leadership & Management</h3>
+                <p class="desc">Concise answers for highly repeated management questions.</p>
+                <div class="price-list">
+                    <div class="price-item"><span>SAQs Only</span><span class="price-val">₹20</span></div>
+                    <div class="price-item"><span>LAQs Only</span><span class="price-val">₹30</span></div>
+                    <div class="price-item"><span>FULL PDF</span><span class="price-val">₹50</span></div>
+                </div>
+                <div class="btn-group">
+                    <a href="leadership_sample_SAQ.png" target="_blank" class="btn btn-sample">View Sample</a>
+                    <a href="https://wa.me/919618127640?text=Hi, I want Leadership %26 Management PDF" class="btn btn-buy">Buy Now</a>
+                </div>
+            </div>
+
+            <!-- SUBJECT 3 -->
+            <div class="card">
+                <div class="tags"><span class="tag">⭐ MOST EXPECTED</span><span class="tag">🎯 HIGH PROBABILITY</span></div>
+                <h3>Life & General Insurance</h3>
+                <p class="desc">Exam-focused questions for the Practice of Life & General Insurance.</p>
+                <div class="price-list">
+                    <div class="price-item"><span>SAQs Only</span><span class="price-val">₹20</span></div>
+                    <div class="price-item"><span>LAQs Only</span><span class="price-val">₹30</span></div>
+                    <div class="price-item"><span>FULL PDF</span><span class="price-val">₹50</span></div>
+                </div>
+                <div class="btn-group">
+                    <a href="life_insurance_sample_LAQ.png" target="_blank" class="btn btn-sample">View Sample</a>
+                    <a href="https://wa.me/919618127640?text=Hi, I want Practice of Life %26 General Insurance PDF" class="btn btn-buy">Buy Now</a>
+                </div>
+            </div>
+
+            <!-- SUBJECT 4 -->
+            <div class="card">
+                <div class="tags"><span class="tag">🔥 SURE SHOT</span><span class="tag">⭐ REPEATED</span></div>
+                <h3>Marketing Research</h3>
+                <p class="desc">Sure shot revision questions designed for quick learning.</p>
+                <div class="price-list">
+                    <div class="price-item"><span>SAQs Only</span><span class="price-val">₹20</span></div>
+                    <div class="price-item"><span>LAQs Only</span><span class="price-val">₹30</span></div>
+                    <div class="price-item"><span>FULL PDF</span><span class="price-val">₹50</span></div>
+                </div>
+                <div class="btn-group">
+                    <a href="marketing_research_sample_SAQ.png" target="_blank" class="btn btn-sample">View Sample</a>
+                    <a href="https://wa.me/919618127640?text=Hi, I want Marketing Research PDF" class="btn btn-buy">Buy Now</a>
+                </div>
+            </div>
+        </div>
+
+        <!-- BUNDLE SECTION -->
+        <div class="bundle-box">
+            <h2>🎯 ALL SUBJECTS BUNDLE</h2>
+            <p>Get all 4 subjects (Full PDFs) at a discounted price.</p>
+            <div class="bundle-price">₹149</div>
+            <a href="https://wa.me/919618127640?text=Hi, I want the All Subjects Bundle PDF" class="btn btn-buy" style="display:inline-block; padding: 15px 40px; font-size: 1rem;">Get the Bundle</a>
+            <p class="instructions">📲 After payment, send screenshot on WhatsApp (+91 9618127640) to receive full PDFs instantly.</p>
+        </div>
+
+    </div>
+
+    <div class="yt-section">
+        <h3>Watch Free Explanations</h3>
+        <p>Subscribe to our channel for concept-wise breakdowns.</p>
+        <a href="https://www.youtube.com/channel/UCI59fd1UIX_XH-Jy5K4dwyg" target="_blank" class="yt-btn">Go to YouTube</a>
+    </div>
+
+    <footer>
+        <p>© 2026 NoteForge | Designed for students, by a student.</p>
+        <p>WhatsApp: +91 9618127640</p>
+    </footer>
+
+</body>
+</html>
